@@ -1,7 +1,7 @@
 ================SIMPLE LEX PROGRAM===================
 
 Script started on Mon Jul 20 15:27:59 2026
-[?1034h[24bcs179@mepcolinux EX1]$cat NUM.l
+[?1034h[24bcs154@mepcolinux EX1]$cat NUM.l
 %{
 #include<stdio.h>
 %}
@@ -30,9 +30,9 @@ int yywrap()
 return 1;
 }
 
-[24bcs179@mepcolinux EX1]$lex NUM.l
-[24bcs179@mepcolinux EX1]$gcc lex.yy.c -o 8
-[24bcs179@mepcolinux EX1]$./8 sai.txt
+[24bcs154@mepcolinux EX1]$lex NUM.l
+[24bcs154@mepcolinux EX1]$gcc lex.yy.c -o 8
+[24bcs154@mepcolinux EX1]$./8 sai.txt
 Positve Number:10
 Negative Number:-25
 Fraction Number:24.5610
@@ -54,7 +54,7 @@ Negative Number:-25
 Fraction Number:24.5610
 Negative Number:-25
 Fraction Number:24.56
-[24bcs179@mepcolinux EX1]$cat query.l
+[24bcs154@mepcolinux EX1]$cat query.l
 %{
 #include <stdio.h>
 %}
@@ -110,9 +110,9 @@ int yywrap()
 return 1;
 }
 
-[24bcs179@mepcolinux EX1]$lex query.l
-[24bcs179@mepcolinux EX1]$gcc lex.yy.c -o 7
-[24bcs179@mepcolinux EX1]$./7 query.txt
+[24bcs154@mepcolinux EX1]$lex query.l
+[24bcs154@mepcolinux EX1]$gcc lex.yy.c -o 7
+[24bcs154@mepcolinux EX1]$./7 query.txt
 <SELECT>
 <IDENTIFIER,name>
 <FROM>
@@ -122,9 +122,9 @@ return 1;
 <LIKE>
 <STRING,'chennai'>
 <SEMICOLON>
-[24bcs179@mepcolinux EX1]$cat query.txt
+[24bcs154@mepcolinux EX1]$cat query.txt
 SELECT name FROM employee WHERE city LIKE 'chennai';
-[24bcs179@mepcolinux EX1]$cat relational.l
+[24bcs154@mepcolinux EX1]$cat relational.l
 %{
 #include <stdio.h>
 %}
@@ -160,14 +160,14 @@ int yywrap()
 return 1;
 }
 
-[24bcs179@mepcolinux EX1]$lex relational.l
-[24bcs179@mepcolinux EX1]$gcc lex.yy.c -0 6
-[24bcs179@mepcolinux EX1]$./6 op.txt
+[24bcs154@mepcolinux EX1]$lex relational.l
+[24bcs154@mepcolinux EX1]$gcc lex.yy.c -0 6
+[24bcs154@mepcolinux EX1]$./6 op.txt
 > : Greater than
 < : Less than
 >= : Greater than or equal to
 <= : Less than or equal to
-[24bcs179@mepcolinux EX1]$cat url.l
+[24bcs154@mepcolinux EX1]$cat url.l
 %{
 #include <stdio.h>
 %}
@@ -225,14 +225,14 @@ int yywrap()
 return 1;
 }
 
-[24bcs179@mepcolinux EX1]$lex url.l
-[24bcs179@mepcolinux EX1]$gcc lex.yy.c -o 5
-[24bcs179@mepcolinux EX1]$./5 sample.html 
+[24bcs154@mepcolinux EX1]$lex url.l
+[24bcs154@mepcolinux EX1]$gcc lex.yy.c -o 5
+[24bcs154@mepcolinux EX1]$./5 sample.html 
 https://google.com
 images/banner.jpg
 style.css
 js/script.js
-[24bcs179@mepcolinux EX1]$cat count.l
+[24bcs154@mepcolinux EX1]$cat count.l
 %{
 #include<stdio.h>
 int words=0,chars=0,lines=0;
@@ -259,17 +259,17 @@ int yywrap()
 {
 return 1;
 }
-[24bcs179@mepcolinux EX1]$lex count.l
-[24bcs179@mepcolinux EX1]$gcc lex.yy.c -o 4
-[24bcs179@mepcolinux EX1]$./4 count.txt
+[24bcs154@mepcolinux EX1]$lex count.l
+[24bcs154@mepcolinux EX1]$gcc lex.yy.c -o 4
+[24bcs154@mepcolinux EX1]$./4 count.txt
 WORDS     :11
 CHARACTERS:44
 LINES     :3
-[24bcs179@mepcolinux EX1]$cat count.txt
+[24bcs154@mepcolinux EX1]$cat count.txt
 HI HOW ARE YOU
 I AM FINE
 WHAT ARE YOU DOING
-[24bcs179@mepcolinux EX1]$exit
+[24bcs154@mepcolinux EX1]$exit
 exit
 
 Script done on Mon Jul 20 15:33:17 2026
